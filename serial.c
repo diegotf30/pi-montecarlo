@@ -13,6 +13,7 @@
 #define frand() ((double) rand() / (RAND_MAX))
 
 #define MAXLEN (atoi(argv[1]))
+#define SLEEP (argc == 3 && argv[2] == "sleep")
 
 
 // Funcion para verificar si cayo dentro del circulo
@@ -36,8 +37,8 @@ int main(int argc, char *argv[])
 	{
 		if(circumscribed(1) > 0) // What?
 			circles++;
-		
-		usleep(rand() % 3); // Sleep from 0-2 seconds
+		if(SLEEP)
+			usleep(rand() % 3); // Sleep from 0-2 seconds
 	}
 	
 	pi = 4 * ((float) circles/(float) MAXLEN);
