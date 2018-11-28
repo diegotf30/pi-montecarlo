@@ -17,7 +17,7 @@ An analysis on obtaining Pi using the Montecarlo method with OpenMP
 |critical_4t <td colspan=1>0.002 <td colspan=2 align="center">0.004 <td colspan=1>0.007 <td colspan=1>0.019 <td colspan=1>0.203
 |critical_8t <td colspan=1>0.006 <td colspan=1>0.005 <td colspan=1>0.006 <td colspan=1>0.011 <td colspan=1>0.028 <td colspan=1>0.251
 
-And Without the ```ump_sleep(rand() % 3)``` diretive:
+Without the ```ump_sleep(rand() % 3)``` diretive:
 
 | <td colspan=6 align="center"><b>Number of iterations
 |-
@@ -32,6 +32,16 @@ And Without the ```ump_sleep(rand() % 3)``` diretive:
 |critical_2t <td colspan=1>0.003 <td colspan=2 align="center">0.004 <td colspan=1>0.007 <td colspan=1>0.019 <td colspan=1>0.097
 |critical_4t <td colspan=3 align="center">0.004 <td colspan=1>0.009 <td colspan=1>0.026 <td colspan=1>0.186
 |critical_8t <td colspan=1>0.005 <td colspan=1>0.007 <td colspan=1>0.003 <td colspan=1>0.010 <td colspan=1>0.032 <td colspan=1>0.246
+  
+And finally, using pthreads instead of OpenMP (using ```usleep()```):
+
+| <td colspan=6 align="center"><b>Number of iterations
+|-
+| <td colspan=1><b>10 <td colspan=1><b>100 <td colspan=1><b>1,000 <td colspan=1><b>10,000 <td colspan=1><b>100,000 <td colspan=1><b>1,000,000
+|mutex_2t <td colspan=1>0.003 <td colspan=1>0.004 <td colspan=1>0.033 <td colspan=1>0.291 <td colspan=1>2.916 <td colspan=1>28.97 
+|mutex_4t <td colspan=1>0.003 <td colspan=1>0.005 <td colspan=1>0.018 <td colspan=1>0.150 <td colspan=1>1.488 <td colspan=1>14.85
+|mutex_8t <td colspan=2 align="center">0.003 <td colspan=1>0.011 <td colspan=1>0.067 <td colspan=1>0.717 <td colspan=1>7.348
+
   
 ### Try it yourself!
 
