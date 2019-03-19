@@ -17,7 +17,7 @@ An analysis on obtaining Pi using the Montecarlo method with OpenMP
 |critical_4t <td colspan=1>0.002 <td colspan=2 align="center">0.004 <td colspan=1>0.007 <td colspan=1>0.019 <td colspan=1>0.203
 |critical_8t <td colspan=1>0.006 <td colspan=1>0.005 <td colspan=1>0.006 <td colspan=1>0.011 <td colspan=1>0.028 <td colspan=1>0.251
 
-Without the ```ump_sleep(rand() % 3)``` diretive:
+Without the ```ump_sleep(rand() % 3)``` directive:
 
 | <td colspan=6 align="center"><b>Number of iterations
 |-
@@ -33,7 +33,7 @@ Without the ```ump_sleep(rand() % 3)``` diretive:
 |critical_4t <td colspan=3 align="center">0.004 <td colspan=1>0.009 <td colspan=1>0.026 <td colspan=1>0.186
 |critical_8t <td colspan=1>0.005 <td colspan=1>0.007 <td colspan=1>0.003 <td colspan=1>0.010 <td colspan=1>0.032 <td colspan=1>0.246
   
-And finally, using pthreads instead of OpenMP (using ```usleep()```):
+And finally, using pthreads instead of OpenMP (with ```usleep()```):
 
 | <td colspan=6 align="center"><b>Number of iterations
 |-
